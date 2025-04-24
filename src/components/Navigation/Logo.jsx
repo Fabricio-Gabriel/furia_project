@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logoFuria from '../assets/imgs/furia.png'
+import logoFuria from '../../assets/imgs/furia.png'
 
 const Logo = () => {
   return (

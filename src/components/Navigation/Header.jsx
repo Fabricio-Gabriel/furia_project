@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import Logo from "./Logo";
 import Nav from "./Nav";
 import Menu from "./Menu";
+import Aside from "./Aside";
 
 const Header = () => {
   const [larguraTela, setLarguraTela] = useState(window.innerWidth);
+  const [asideVisble, setAsideVisible] = useState(true);
 
   useEffect(() => {
     const handleResize = () => {
@@ -25,16 +26,30 @@ const Header = () => {
       <Logo/>
 
       {
-        (larguraTela > 950 
+        (larguraTela > 951.5
           ? <Menu display={"hidden"}/> 
-          : <Menu display={"block"}/>
+          : <Menu display={"block"} toggleAside={() => setAsideVisible(prev => !prev)}/>
         )
       }
 
       {
-        (larguraTela < 950
-          ? <Nav display={"hidden"}/>
-          : <Nav display={"block"}/>
+        (larguraTela < 951.5
+          ? <Nav display={"hidden"} 
+            direction={"flex-row"} 
+            distance={'gap-10'}
+          />
+
+          : <Nav display={"block"}
+            direction={"flex-row"} 
+            distance={'gap-10'}
+          />
+        )
+      }
+
+      {
+        (larguraTela > 951.5
+          ? <Aside isVisible={false}/>
+          : <Aside isVisible={asideVisble}/>
         )
       }
 
