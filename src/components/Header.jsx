@@ -1,27 +1,45 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import logoFuria from '../assets/imgs/furia.png'
-
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import Logo from "./Logo";
+import Nav from "./Nav";
+import Menu from "./Menu";
 
 const Header = () => {
-  return (
-    <div className='header w-full h-[70px] flex items-center justify-between'>
-      <div className="header_div--logo w-[70%]">
-        <Link to="/">
-          <img className='overflow-hidden h-[50px]' src={logoFuria} alt="Logo da Furia"/>
-        </Link>
-      </div>
+  const [larguraTela, setLarguraTela] = useState(window.innerWidth);
 
-      <div className="header_nav-nav flex w-[30%]">
-          <ul className='text-white flex items-center justify-between w-full text-[1.2rem]'>
-            <li><Link to="/"></Link>Home</li>
-            <li><Link to="#"></Link>Sobre</li>
-            <li><Link to="#">Contato</Link></li>
-            <li><Link to="#"></Link>Nosso Time</li>
-          </ul>
-      </div>
+  useEffect(() => {
+    const handleResize = () => {
+      setLarguraTela(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  return (
+    <div className="header h-[70px] w-full flex items-center justify-around">
+      
+      <Logo/>
+
+      {
+        (larguraTela > 950 
+          ? <Menu display={"hidden"}/> 
+          : <Menu display={"block"}/>
+        )
+      }
+
+      {
+        (larguraTela < 950
+          ? <Nav display={"hidden"}/>
+          : <Nav display={"block"}/>
+        )
+      }
+
     </div>
-  )
-}
+  );
+};
 
 export default Header;

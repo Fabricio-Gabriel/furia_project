@@ -7,14 +7,15 @@
   overflow-x: hidden;
 }
 
-body, html {
+body,
+html {
   width: 100svw;
   height: 100svh;
 }
 
 .header {
   background-color: rgb(17, 17, 17);
-  padding: 40px 110px;
+  /* padding: 40px 110px; */
   overflow-y: hidden;
 }
 
@@ -32,10 +33,3 @@ body, html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 } */
-
-
-
-
-
-
-
