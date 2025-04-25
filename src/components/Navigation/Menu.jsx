@@ -1,5 +1,4 @@
 import React from 'react';
-import Aside from './Aside';
 
 const Menu = ({ display, toggleAside }) => {
   return (

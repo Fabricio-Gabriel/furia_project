@@ -6,7 +6,7 @@ import Aside from "./Aside";
 
 const Header = () => {
   const [larguraTela, setLarguraTela] = useState(window.innerWidth);
-  const [asideVisble, setAsideVisible] = useState(true);
+  const [asideVisble, setAsideVisible] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -41,7 +41,7 @@ const Header = () => {
 
           : <Nav display={"block"}
             direction={"flex-row"} 
-            distance={'gap-10'}
+            distance={'gap-15'}
           />
         )
       }
