@@ -20,7 +20,7 @@ const Nav = ({ display, direction, distance, color, height}) => {
                 after:ease-in-out after:delay-0 hover:after:w-full'>Sobre</Link>
             </li>
             <li>
-                <Link to="#" className='transition-all duration-[0.3s] ease-in-out 
+                <Link to="/chat" className='transition-all duration-[0.3s] ease-in-out 
                 delay-0 relative after:overflow-hidden after:content-[" "] 
                 after:w-0 after:h-[2px] after:bg-white after:block after:absolute 
                 after:left-0 after:bottom-0 after:transition-all after:duration-[0.3s] 
