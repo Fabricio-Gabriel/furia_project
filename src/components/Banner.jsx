@@ -18,17 +18,19 @@ const Banner = () => {
     }, []);
 
   return (
-    <div>
+    <div className=' h-full'>
       {
         (larguraTela < 768
             ? <img 
                 src={furiaBannerResponsivo} 
-                alt="Banner furia adidas" 
+                alt="Banner furia adidas"
+                className='object-cover' 
             />
 
             : <img 
                 src={furiaBanner} 
                 alt="Banner furia adidas" 
+                className='object-cover'
             />
         )
       }

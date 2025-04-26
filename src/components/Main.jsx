@@ -3,7 +3,7 @@ import Banner from './Banner';
 
 const Main = () => {
   return (
-    <div className='w-full h-full min-h-screen flex justify-center bg-amber-300'>
+    <div className='w-full h-full flex justify-center bg-[#f1f1f1]'>
 
       <Banner />
 
