@@ -2,7 +2,7 @@ import React from 'react';
 
 const TxtChat = () => {
   return (
-    <div className='h-full w-[45%] bg-blue-300'>
+    <div className='h-full w-[50%] bg-blue-300'>
       
     </div>
   )
