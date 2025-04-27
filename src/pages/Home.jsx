@@ -2,6 +2,7 @@ import React from 'react';
 import Main from '../components/Main';
 import Contain from '../components/Contain';
 import ContainSobre from '../components/sec_sobre/ContainSobre';
+import ContainChat from '../components/sec_chat/ContainChat';
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
 
       <Main />
       <Contain container={<ContainSobre/>} />
+      <Contain container={<ContainChat/>} color="#111111"/>
 
     </div>
     </>

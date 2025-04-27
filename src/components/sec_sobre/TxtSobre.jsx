@@ -4,7 +4,7 @@ import Paragraph from './Paragraph';
 
 const TxtSobre = () => {
   return (
-    <div className='w-[50%] h-full flex flex-col items-center justify-between bg-blue-400'>
+    <div className='md:w-[50%] w-[85%] h-auto flex flex-col items-center md:justify-between gap-[8px]'>
       <Title />
       <Paragraph />
     </div>

@@ -3,6 +3,7 @@
 
 @import "tailwindcss";
 
+/* CONFIGURAÇÕES ADICIONAIS */
 
 * {
   box-sizing: border-box;
@@ -11,14 +12,12 @@
   overflow-x: hidden;
 }
 
-/* body,
 html {
-  width: 100svw;
-  height: 100svh;
-} */
+  height: auto;
+} 
 
 .header {
-  background-color: rgb(17, 17, 17);
+  background-color: #111111;
   overflow-y: hidden;
 }
 
@@ -42,8 +41,8 @@ html {
   background-color: #f1f1f1;
 }
 
-.contain-sobre {
-  padding-top: 30px;
+.contain-sobre, .contain-chat {
+  padding: 40px;
 }
 
 .h1-sobre {
@@ -61,3 +60,14 @@ html {
   font-style: normal;
 }
 
+.title {
+  padding-top: 10px;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 466px) {
+  .title {
+    padding-top: 0;
+  }
+}

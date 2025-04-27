@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Contain = ({ container }) => {
+const Contain = ({ container, color }) => {
   return (
-    <div className='w-full h-auto flex justify-center bg-fuchsia-700'>
+    <div className={`w-full h-auto flex justify-center bg-[${color}]`}>
       {container}
     </div>
   )
