@@ -7,7 +7,7 @@ import ContainChat from '../components/sec_chat/ContainChat';
 const Home = () => {
   return (
     <>
-    <div className='home flex flex-col items-center w-[100svw] h-[100svh'>
+    <div className='home flex flex-col items-center w-[100svw] relative'>
 
       <Main />
       <Contain container={<ContainSobre/>} />
