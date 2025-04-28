@@ -1,13 +1,13 @@
 import React from 'react';
-import camisaFuria from '../../assets/imgs/camisa-furia.jpg'
+import torcidaFuria from '../../assets/imgs/torcida_furia.jpg'
 
 const ImgChat = () => {
   return (
-    <div className='md:w-[50%] w-[85%] md:h-full bg-green-500'>
+    <div className='md:w-[50%] w-[85%] md:h-full h-auto'>
       <img 
-        src={camisaFuria} 
-        alt="camisa Furia"
-        className='h-full object-cover' 
+        src={torcidaFuria} 
+        alt="torcida Furia"
+        className='h-full w-full object-cover' 
       />
     </div>
   )

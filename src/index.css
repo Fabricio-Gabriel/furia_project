@@ -45,11 +45,15 @@ html {
   padding: 40px;
 }
 
+.btn-chat {
+  padding: 22px;
+}
+
 .h1-sobre {
   padding-bottom: 9px;
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 900;
   font-style: normal;
 }
 
