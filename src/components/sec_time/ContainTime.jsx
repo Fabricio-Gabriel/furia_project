@@ -4,7 +4,7 @@ import ImgTime from './ImgTime';
 
 const ContainTime = () => {
   return (
-    <div className='contain-time bg-amber-400 w-full h-[600px] min-[1360px]:max-w-[1350px] 
+    <div className='contain-time w-full h-auto min-[1360px]:max-w-[1350px] 
     min-[1220px]:max-w-[1200px] min-[1100px]:max-w-[1000px] 
     min-[1000px]:max-w-[950px] max-w-[900px] 
 
