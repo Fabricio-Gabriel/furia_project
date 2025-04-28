@@ -8,7 +8,7 @@ const Whatsapp = () => {
     <a href='https://wa.me/5511993404466' target='_blank'>
         <div className='fixed flex justify-center items-center 
         sm:w-[70px] sm:h-[70px] w-[59px] h-[59px] z-40 
-        bg-[#22b95c] hover:bg-[#22b95cd2] 
+        bg-[#22b95c] hover:bg-[#22b95cec] 
         transition-all duration-[0.5s] ease-in-out delay-0
         rounded-[50%] bottom-13 md:right-15 right-6'>
 

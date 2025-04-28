@@ -3,6 +3,7 @@ import Main from '../components/Main';
 import Contain from '../components/Contain';
 import ContainSobre from '../components/sec_sobre/ContainSobre';
 import ContainChat from '../components/sec_chat/ContainChat';
+import ContainTime from '../components/sec_time/ContainTime';
 
 const Home = () => {
   return (
@@ -11,7 +12,8 @@ const Home = () => {
 
       <Main />
       <Contain container={<ContainSobre/>} />
-      <Contain container={<ContainChat/>} color="#111111"/>
+      <Contain container={<ContainChat/>} color="#111111" />
+      <Contain container={<ContainTime/>} color="#fff" />
 
     </div>
     </>

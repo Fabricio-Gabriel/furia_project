@@ -10,7 +10,7 @@ const ButtonChat = () => {
       
       min-[1220px]:text-[1rem] text-[0.8rem]
       
-      hover:cursor-pointer hover:bg-black hover:border-2 hover:text-white
+      hover:cursor-pointer hover:bg-[#111111] hover:border-2 hover:text-white
       
       transition-all duration-[.4s] ease-in-out delay-0'>
         <FontAwesomeIcon icon={faComment} className='font-semibold'/>
