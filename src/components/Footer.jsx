@@ -1,9 +1,11 @@
 import React from 'react';
+import ContainFooter from './ContainFooter';
+
 
 const Footer = () => {
   return (
-    <div className='h-[500px] w-full bg-[#111111]'>
-      
+    <div className='w-full h-auto flex justify-center bg-[#111111]'>
+      <ContainFooter />
     </div>
   )
 }

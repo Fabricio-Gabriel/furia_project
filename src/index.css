@@ -41,7 +41,7 @@ html {
   background-color: #f1f1f1;
 }
 
-.contain-sobre, .contain-chat, .contain-time {
+.contain-sobre, .contain-chat, .contain-time, .contain-footer {
   padding: 40px;
 }
 
@@ -59,6 +59,12 @@ html {
 
 .title {
   padding-top: 10px;
+}
+
+.txt-footer {
+  padding-bottom: 9px;
+  font-family: "Jost", sans-serif;
+  font-style: normal;
 }
 
 /* MEDIA QUERIES */
