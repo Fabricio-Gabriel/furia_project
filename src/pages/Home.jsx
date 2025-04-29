@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+
 import Main from '../components/Main';
 import Contain from '../components/Contain';
 import ContainSobre from '../components/sec_sobre/ContainSobre';
 import ContainChat from '../components/sec_chat/ContainChat';
 import ContainTime from '../components/sec_time/ContainTime';
 
+
 const Home = () => {
+ 
   return (
     <>
     <div className='home flex flex-col items-center w-[100svw] relative'>

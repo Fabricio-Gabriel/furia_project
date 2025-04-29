@@ -1,10 +1,35 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import ImgChat from './ImgChat.jsx';
 import TxtChat from './TxtChat.jsx';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const ContainChat = () => {
+  const secChat = useRef(null);
+
+  useEffect(() => {
+    gsap.fromTo(
+      secChat.current,
+      {
+        x: 400, opacity: 0
+      },
+      {
+        x: 0, 
+        opacity: 1, 
+        duration: 0.8,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: secChat.current,
+          start: 'top 80%',
+        },
+      }
+    )
+  }, [])
+
   return (
-    <div id='nosso-chat' className="contain-chat w-full h-auto min-[1360px]:max-w-[1350px] 
+    <div ref={secChat} id='nosso-chat' className="contain-chat w-full h-auto min-[1360px]:max-w-[1350px] 
     min-[1220px]:max-w-[1200px] min-[1100px]:max-w-[1000px] 
     min-[1000px]:max-w-[950px] max-w-[900px] 
 

@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import furiaBanner from '../assets/imgs/furia-adidas.jpg';
-import furiaBannerResponsivo from '../assets/imgs/furia-adidas2.jpg'
+import furiaBannerResponsivo from '../assets/imgs/furia-adidas2.jpg';
+import gsap from 'gsap';
 
 const Banner = () => {
    const [larguraTela, setLarguraTela] = useState(window.innerWidth);
+   const banner = useRef(null);
   
     useEffect(() => {
         const handleResize = () => {
@@ -17,8 +19,22 @@ const Banner = () => {
         };
     }, []);
 
+    useEffect(() => {
+      gsap.fromTo(
+        banner.current,
+        {
+          opacity: 0
+        },
+        {
+          opacity: 1,
+          duration: 1,
+          ease: "power2.out"
+        }
+      )
+    }, []);
+
   return (
-    <div className=' h-full'>
+    <div ref={banner} className=' h-full'>
       {
         (larguraTela < 768
             ? <img 
