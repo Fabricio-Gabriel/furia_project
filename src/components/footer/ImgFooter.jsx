@@ -3,7 +3,7 @@ import logoFuria from '../../assets/imgs/furia.png';
 
 const ImgFooter = () => {
   return (
-    <div className='w-full h-auto bg-blue-600 flex'>
+    <div className='w-full h-auto flex'>
         <a href="/" rel="noopener noreferrer">
             <img 
                 src={logoFuria} 

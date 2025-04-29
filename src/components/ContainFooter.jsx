@@ -4,7 +4,7 @@ import RedesFooter from './RedesFooter';
 
 const ContainFooter = () => {
   return (
-    <div className='contain-footer bg-amber-300 w-full  min-[1360px]:max-w-[1350px] 
+    <div className='contain-footer w-full  min-[1360px]:max-w-[1350px] 
     min-[1220px]:max-w-[1200px] min-[1100px]:max-w-[1000px] 
     min-[1000px]:max-w-[950px] max-w-[900px] 
 

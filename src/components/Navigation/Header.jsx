@@ -48,8 +48,8 @@ const Header = () => {
 
       {
         (larguraTela > 951.5
-          ? <Aside isVisible={false}/>
-          : <Aside isVisible={asideVisble}/>
+          ? <Aside isVisible={false} />
+          : <Aside isVisible={asideVisble} closeAside={() => setAsideVisible(false)}/>
         )
       }
 
