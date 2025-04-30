@@ -68,6 +68,26 @@ html {
   font-style: normal;
 }
 
+.chat {
+  padding: 10px 20px 30px 20px;
+}
+
+.chat-visible {
+  display: flex;
+}
+
+.chat-hidden {
+  display: none;
+}
+
+.header-chat {
+  padding: 10px 15px;
+}
+
+.input-chat {
+  padding: 6px;
+}
+
 /* MEDIA QUERIES */
 
 @media screen and (min-width: 466px) {
