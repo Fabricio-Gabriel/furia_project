@@ -4,17 +4,44 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark, faRobot } from '@fortawesome/free-solid-svg-icons';
 import gsap from 'gsap';
 
-const socket = io('http://localhost:4000');
-
 function Chat({ isOpen, onClose }) {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
   const chat = useRef(null);
   const bottomRef = useRef(null);
+  const socketRef = useRef(null);
+
+  useEffect(() => {
+    fetch('http://localhost:4000/messages')
+      .then(response => response.json())
+      .then(data => setMessages(data))
+      .catch(e => console.error('erro ao carregar mensagens:', e))
+  }, [])
+
+  useEffect(() => {
+    socketRef.current = io('http://localhost:4000');
+  
+    socketRef.current.on('chat message', (msg) => {
+      console.log('Mensagem recebida', msg);
+      setMessages(prev => [...prev, msg]);
+    });
+  
+    return () => {
+      socketRef.current.disconnect();
+    };
+  }, []);
+
+  const sendMessage = (e) => {
+    e.preventDefault();
+    if (input.trim()) {
+      socketRef.current.emit('chat message', input);
+      setInput('');
+    }
+  };
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages]);
+  }, [messages])
 
   useEffect(() => {
     if (isOpen) {
@@ -34,22 +61,7 @@ function Chat({ isOpen, onClose }) {
         pointerEvents: 'none',
       });
     }
-  }, [isOpen]);
-
-  useEffect(() => {
-    socket.on('chat message', (msg) => {
-      setMessages((prev) => [...prev, msg]);
-    });
-    return () => socket.off('chat message');
-  }, []);
-
-  const sendMessage = (e) => {
-    e.preventDefault();
-    if (input.trim()) {
-      socket.emit('chat message', input);
-      setInput('');
-    }
-  };
+  }, [isOpen])
 
   return (
     <div
