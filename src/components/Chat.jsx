@@ -54,9 +54,9 @@ function Chat({ isOpen, onClose }) {
   return (
     <div
       ref={chat}
-      className={`chat z-60 fixed h-[600px] w-[500px] bg-[#111111] text-white 
-        flex flex-col rounded-2xl bottom-5 right-5
-        ${isOpen ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0 pointer-events-none'}`}
+      className={`chat z-60 fixed min-[540px]:h-[600px] min-[540px]:w-[500px] w-[90vw] h-[90vh] bg-[#111111] text-white 
+      flex flex-col rounded-2xl bottom-5 right-5
+      ${isOpen ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0 pointer-events-none'}`}
     >
       <div className="header-chat flex items-center flex-row-reverse justify-between  w-full shrink-0 p-4">
         <button
@@ -65,7 +65,7 @@ function Chat({ isOpen, onClose }) {
         >
           <FontAwesomeIcon icon={faXmark} />
         </button>
-        <h1 className="text-3xl font-bold overflow-hidden text-white">
+        <h1 className="min-[400px]:text-3xl text-2xl font-bold overflow-hidden text-white">
           <FontAwesomeIcon icon={faRobot} /> ChatBot Furia
         </h1>
       </div>
@@ -75,7 +75,7 @@ function Chat({ isOpen, onClose }) {
         {messages.map((msg, i) => (
           <div
             key={i}
-            className={`msg p-3 rounded-lg max-w-[80%] ${
+            className={`msg p-3 rounded-lg min-[450px]:text-[1rem] min-[350px]:text-[0.9rem] text-[0.8rem] max-w-[80%] ${
               msg.sender === 'Bot'
                 ? 'bg-purple-700 italic text-white w-fit ml-0'
                 : 'bg-gray-700 text-white ml-auto w-fit user'
@@ -89,11 +89,11 @@ function Chat({ isOpen, onClose }) {
 
     
       <form
-        className="flex h-[6%] w-full  shrink-0"
+        className="flex min-[470px]:h-[6%] h-[5%] w-full  shrink-0"
         onSubmit={sendMessage}
       >
         <input
-          className="w-[80%] p-3 bg-[#1b1b1b] text-white placeholder-gray-400 outline-none rounded-[4px] border border-white"
+          className="input-chat w-[80%] min-[420px]:text-[1rem] text-[0.8rem] p-3 bg-[#1b1b1b] text-white placeholder-gray-400 outline-none rounded-[4px] border border-white"
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder="Mande seu apoio para a FURIA..."

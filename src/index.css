@@ -89,8 +89,8 @@ html {
 }
 
 .msg {
-  padding: 5px;
-  margin-bottom: 5px;
+  padding: 7px;
+  margin: 8px 0;
 }
 
 .user {
@@ -129,5 +129,11 @@ html {
 @media screen and (min-width: 466px) {
   .title {
     padding-top: 0;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  .chat {
+    height: 480px;
   }
 }
