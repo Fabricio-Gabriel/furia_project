@@ -64,3 +64,7 @@ Para rodar o backend temos duas opções que terão o mesmo resultado:<br>
 
 ## 📷 Funcionamento do projeto:
 ![Tela do projeto](./src/assets/imgs/tela-projeto.png)
+
+<br>
+
+Projeto sem vínculo oficial com a **FURIA**, apenas o projeto de um grande torcedor do time! 🔥
