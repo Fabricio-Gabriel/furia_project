@@ -57,7 +57,10 @@ Para rodar o front-end, feito em ReactJS, basta apenas escrever este comando na 
 Para rodar o backend temos duas opções que terão o mesmo resultado:<br>
 - Opção 1: `npm start`
 - Opção 2: `node server.js`
-<br>
+
 ## 🌐 Comunicação entre Frontend e Backend
 - O frontend se conecta ao backend via Socket.IO e consome a API REST em /messages.
 - O backend emite mensagens de bot a cada 8 segundos simulando eventos como kills, plant de C4, pausas, etc.
+
+## 📷 Funcionamento do projeto:
+![Tela do projeto](./src/assets/imgs/tela-projeto.png)
