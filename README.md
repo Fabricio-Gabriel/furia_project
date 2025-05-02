@@ -50,15 +50,14 @@ Inicialmente, em nosso projeto, devemos instalar todas as dependências! Tanto n
 
 Para rodar o front-end, feito em ReactJS, basta apenas escrever este comando na pasta raiz do projeto: <br>
 ```npm run dev``` 
-<br>Isso fará com que o projeto seja rodado, aparecendo desta forma em seu terminal: 
+<br><br>Isso fará com que o projeto seja rodado, aparecendo desta forma em seu terminal: 
 <br>
 ![Imagem do terminal](./src/assets/imgs/terminal.png)
 <br><br>
 Para rodar o backend temos duas opções que terão o mesmo resultado:<br>
 - Opção 1: `npm start`
-<br>
 - Opção 2: `node server.js`
 <br>
-Se tudo ocorrer bem, isso aparecerá em seu terminal:
-<br>
-![terminal-backend](./src/assets/imgs/terminal-backend.png)
+## 🌐 Comunicação entre Frontend e Backend
+- O frontend se conecta ao backend via Socket.IO e consome a API REST em /messages.
+- O backend emite mensagens de bot a cada 8 segundos simulando eventos como kills, plant de C4, pausas, etc.
