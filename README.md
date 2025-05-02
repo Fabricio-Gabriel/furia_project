@@ -1,12 +1,51 @@
-# React + Vite
+# 🤖 FURIA chat em tempo real
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é uma simulação de **chat em tempo real** com integração de **eventos automáticos via bot** de acontecimentos In-Game do time da **FURIA** em seus jogos. Idealizado para fãs da equipe de eSports **FURIA**, ele faz uma simulação de chat em que fãs possam trocar mensagens e que, também, recebam atualizações simuladas de partidas através de eventos automáticos enviados por um bot.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## 📁 Estrutura do Projeto
+furia/ 
+<br>├── backend/ # Node.js + Express + MongoDB + Socket.IO 
+<br>├── frontend/ # React + TailwindCSS + Socket.IO Client
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### ✅ Frontend (React)
+- Interface moderna com animações (GSAP + Tailwind)
+- Scroll automático até a última mensagem
+- Exibição diferenciada para mensagens do bot
+- Envio de mensagens em tempo real via Socket.IO
+
+### ✅ Backend (Node.js + Express)
+- Integração com MongoDB via Mongoose
+- Emissão de eventos automáticos com mensagens de bot
+- Histórico de mensagens (rota REST `/messages`)
+- Suporte a WebSocket com configuração CORS adequada
+
+
+## ⚙️ Tecnologias Utilizadas
+
+### 🖥️ Frontend
+- Vite
+- React
+- Tailwind CSS
+- GSAP (animações)
+- Socket.IO Client
+- Font Awesome
+
+### 🧠 Backend
+- Node.js
+- Express
+- MongoDB + Mongoose
+- Socket.IO
+- CORS
+- Dotenv
+
+## 🔧 Como Rodar o Projeto
+
+Inicialmente, em nosso projeto, devemos instalar todas as dependências! Tanto no front-end quanto no back-end, escrevendo o comando: <br>
+`npm i` ou `npm install`. 
+<br><br>Caso queira instalar as dependências do back-end, basta trocar a pasta, em seu terminal, da seguinte forma: `cd backend` e em seguida `npm i` pronto dependências instaladas.
+
+Para rodar o front-end, feito em ReactJS, basta apenas escrever este comando na pasta raiz do projeto: <br>
+```npm run dev``` Isso fará com que o projeto seja rodado, aparecendo desta forma em seu terminal: <br>
+![Imagem do terminal]()
