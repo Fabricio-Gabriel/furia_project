@@ -42,10 +42,23 @@ furia/
 
 ## 🔧 Como Rodar o Projeto
 
+Instale em seu computador o NodeJS para rodar o gerenciador de pacotes `npm`!<br><br>
+
 Inicialmente, em nosso projeto, devemos instalar todas as dependências! Tanto no front-end quanto no back-end, escrevendo o comando: <br>
 `npm i` ou `npm install`. 
 <br><br>Caso queira instalar as dependências do back-end, basta trocar a pasta, em seu terminal, da seguinte forma: `cd backend` e em seguida `npm i` pronto dependências instaladas.
 
 Para rodar o front-end, feito em ReactJS, basta apenas escrever este comando na pasta raiz do projeto: <br>
-```npm run dev``` Isso fará com que o projeto seja rodado, aparecendo desta forma em seu terminal: <br>
-![Imagem do terminal]()
+```npm run dev``` 
+<br>Isso fará com que o projeto seja rodado, aparecendo desta forma em seu terminal: 
+<br>
+![Imagem do terminal](./src/assets/imgs/terminal.png)
+<br><br>
+Para rodar o backend temos duas opções que terão o mesmo resultado:<br>
+- Opção 1: `npm start`
+<br>
+- Opção 2: `node server.js`
+<br>
+Se tudo ocorrer bem, isso aparecerá em seu terminal:
+<br>
+![terminal-backend](./src/assets/imgs/terminal-backend.png)
