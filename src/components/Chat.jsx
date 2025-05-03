@@ -20,6 +20,8 @@ function Chat({ isOpen, onClose }) {
 
   useEffect(() => {
     socketRef.current = io(import.meta.env.VITE_BACKEND_URL);
+    console.log(import.meta.env.VITE_BACKEND_URL);
+    
   
     socketRef.current.on('chat message', (msg) => {
       console.log('Mensagem recebida', msg);

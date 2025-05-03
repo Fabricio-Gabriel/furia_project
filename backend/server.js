@@ -9,14 +9,14 @@ dotenv.config();
 
 const app = express();
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://localhost:3000', 'https://furia-project-chi.vercel.app'],
+  origin: ['http://localhost:5173', 'http://localhost:3000', 'https://furia-project-chi.vercel.app', '*.railway.app'],
   credentials: true
 }));
 
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: ['http://localhost:5173', 'http://localhost:3000', 'https://furia-project-chi.vercel.app'],
+    origin: ['http://localhost:5173', 'http://localhost:3000', 'https://furia-project-chi.vercel.app', '*.railway.app'],
     methods: ['GET', 'POST'],
     credentials: true
   }
@@ -123,7 +123,7 @@ io.on('connection', (socket) => {
 const PORT = process.env.PORT || 4000;
 
 server.listen(PORT, async () => {
-  console.log(`Servidor em: http://localhost:${PORT}`);
+  console.log(`Servidor na porta: ${PORT}`);
   await seedBotMessages();
   await startGameBot();
 });
