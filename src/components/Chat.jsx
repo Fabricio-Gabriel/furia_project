@@ -12,14 +12,14 @@ function Chat({ isOpen, onClose }) {
   const socketRef = useRef(null);
 
   useEffect(() => {
-    fetch('http://localhost:4000/messages')
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/messages`)
       .then(response => response.json())
       .then(data => setMessages(data))
       .catch(e => console.error('erro ao carregar mensagens:', e))
   }, [])
 
   useEffect(() => {
-    socketRef.current = io('http://localhost:4000');
+    socketRef.current = io(import.meta.env.VITE_BACKEND_URL);
   
     socketRef.current.on('chat message', (msg) => {
       console.log('Mensagem recebida', msg);
