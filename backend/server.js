@@ -105,6 +105,19 @@ app.get('/messages', async (req, res) => {
   res.json(allMessages);
 });
 
+function limparMensagensAntigas() {
+  setInterval(async () => {
+    const limite = new Date(Date.now() - 24 * 60 * 60 * 1000); // 24 horas atrás
+
+    try {
+      const resultado = await Message.deleteMany({ createdAt: { $lt: limite } });
+      console.log(`[${new Date().toLocaleString()}] Mensagens antigas excluídas: ${resultado.deletedCount}`);
+    } catch (error) {
+      console.error('Erro ao excluir mensagens antigas:', error);
+    }
+  }, 24 * 60 * 60 * 1000); // Executa a cada 24 horas
+}
+
 io.on('connection', (socket) => {
   console.log('Fã conectado');
 
@@ -126,4 +139,5 @@ server.listen(PORT, async () => {
   console.log(`Servidor na porta: ${PORT}`);
   await seedBotMessages();
   await startGameBot();
+  await limparMensagensAntigas();
 });
