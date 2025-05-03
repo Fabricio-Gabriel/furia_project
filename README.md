@@ -1,6 +1,6 @@
 # 🤖 FURIA chat em tempo real
 
-Este projeto é uma simulação de **chat em tempo real** com integração de **eventos automáticos via bot** de acontecimentos In-Game do time da **FURIA** em seus jogos. Idealizado para fãs da equipe de eSports **FURIA**, ele faz uma simulação de chat em que fãs possam trocar mensagens e que, também, recebam atualizações simuladas de partidas através de eventos automáticos enviados por um bot.
+Este projeto é uma simulação de **chat em tempo real** com integração de **eventos automáticos via bot** de acontecimentos In-Game do time da **FURIA** em seus jogos. Idealizado para fãs da equipe de eSports **FURIA**, ele faz uma simulação de chat em que fãs possam trocar mensagens e que, também, recebam atualizações simuladas de partidas através de eventos automáticos enviados por um bot. O site está ativo e pode ser acessado nesse [Link](https://furia-project-chi.vercel.app/).
 
 
 
