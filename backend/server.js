@@ -107,15 +107,13 @@ app.get('/messages', async (req, res) => {
 
 function limparMensagensAntigas() {
   setInterval(async () => {
-    const limite = new Date(Date.now() - 24 * 60 * 60 * 1000); // 24 horas atrás
-
     try {
-      const resultado = await Message.deleteMany({ createdAt: { $lt: limite } });
-      console.log(`[${new Date().toLocaleString()}] Mensagens antigas excluídas: ${resultado.deletedCount}`);
+      const resultado = await Message.deleteMany({});
+      console.log(`[${new Date().toLocaleString()}] Todas as mensagens foram excluídas. Total removido: ${resultado.deletedCount}`);
     } catch (error) {
-      console.error('Erro ao excluir mensagens antigas:', error);
+      console.error('Erro ao excluir todas as mensagens:', error);
     }
-  }, 24 * 60 * 60 * 1000); // Executa a cada 24 horas
+  }, 5 * 60 * 60 * 1000);
 }
 
 io.on('connection', (socket) => {
