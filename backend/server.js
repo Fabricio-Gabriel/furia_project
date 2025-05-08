@@ -137,5 +137,5 @@ server.listen(PORT, async () => {
   console.log(`Servidor na porta: ${PORT}`);
   await seedBotMessages();
   await startGameBot();
-  await limparMensagensAntigas();
+  limparMensagensAntigas();
 });
